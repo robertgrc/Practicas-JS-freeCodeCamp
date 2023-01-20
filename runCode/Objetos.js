@@ -141,3 +141,47 @@ const myDog3 = {
 myDog3.name = "Happy Coder";
 console.log(myDog3.name);
 // Only change code below this line
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Add New Properties to a JavaScript Object
+
+// You can add new properties to existing JavaScript objects the same way you would modify them.
+
+// Here's how we would add a bark property to ourDog:
+
+// ourDog.bark = "bow-wow";
+// or
+
+// ourDog["bark"] = "bow-wow";
+// Now when we evaluate ourDog.bark, we'll get his bark, bow-wow.
+
+//Example:
+
+const ourDog5 = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["everything!"],
+};
+
+ourDog5.bark = "bow-wow";
+
+//*todo Add a bark property to myDog and set it to a dog sound, such as "woof". You may use either dot or bracket notation.
+//Agregue una propiedad de ladrido a myDog y configúrelo con un sonido de perro, como "guau". Puede utilizar la notación de puntos o corchetes.
+// const myDog = {
+//     "name": "Happy Coder",
+//     "legs": 4,
+//     "tails": 1,
+//     "friends": ["freeCodeCamp Campers"]
+//   };
+
+const myDog5 = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+};
+
+myDog5.bark = "woof";
+
+console.log(myDog5);
