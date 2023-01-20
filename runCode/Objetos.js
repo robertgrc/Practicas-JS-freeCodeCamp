@@ -24,7 +24,7 @@ const anotherObject = {
 
 //*Puede establecer estas propiedades de objeto en los valores que desee, siempre que el nombre sea una cadena, las piernas y las colas sean números y amigos sea una matriz.
 
-const myDog = {
+const myDog2 = {
   name: "lucho",
   legs: 2,
   tails: 1,
@@ -77,7 +77,67 @@ const testObj2 = {
 };
 
 // Only change code below this line
-testObj2["an entree"]; // Change this line
-testObj2["the drink"]; // Change this line
-console.log(testObj2["an entree"]);
-console.log(testObj2["the drink"]);
+const entreeValue = testObj2["an entree"]; // Change this line
+const drinkValue = testObj2["the drink"]; // Change this line
+console.log(entreeValue);
+console.log(drinkValue);
+
+//TODO-------------------------------------------------------------------------------
+//TODO  Accessing Object Properties with Variables
+
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle",
+};
+
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed); //-----------------imprime doberman
+//*Tenga en cuenta que no usamos comillas alrededor del nombre de la variable cuando lo usamos para acceder a la propiedad porque estamos usando el valor de la variable, no el nombre.
+
+//*-----------------------------------------------------------------------------------
+//*Set the playerNumber variable to 16. Then, use the variable to look up the player's name and assign it to player.
+
+// Setup
+const testObj3 = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas",
+};
+
+// Only change code below this line
+const playerNumber = 16; // Change this line
+const nuevoPlayer = 19;
+const player = testObj3[playerNumber]; // Change this line
+const player2 = testObj3[nuevoPlayer];
+console.log(player); // -------- Montaña
+console.log(player2); //--------  Unitas
+
+//TODO-------------------------------------------------------------------------------
+//TODO   updating Object Properties
+// or example, let's look at ourDog:
+
+const ourDog = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["everything!"],
+};
+
+//*todo              ourDog.name = "Happy Camper";
+//*or               ourDog["name"] = "Happy Camper";
+// Since he's a particularly happy dog, let's change his name to the string Happy Camper. Here's how we update his object's name property: //*todoourDog.name = "Happy Camper"; or ourDog["name"] = "Happy Camper"; Now when we evaluate ourDog.name, instead of getting Camper, we'll get his new name, Happy Camper.
+
+//*Update the myDog object's name property. Let's change her name from Coder to Happy Coder. You can use either dot or bracket notation.
+
+// Setup
+const myDog3 = {
+  name: "Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+};
+myDog3.name = "Happy Coder";
+console.log(myDog3.name);
+// Only change code below this line
