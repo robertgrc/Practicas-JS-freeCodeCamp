@@ -185,3 +185,111 @@ const myDog5 = {
 myDog5.bark = "woof";
 
 console.log(myDog5);
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Delete Properties from a JavaScript Object
+// We can also delete properties from objects like this:
+
+// delete ourDog.bark;
+// Example:
+
+// const ourDog = {
+//   "name": "Camper",
+//   "legs": 4,
+//   "tails": 1,
+//   "friends": ["everything!"],
+//   "bark": "bow-wow"
+// };
+
+// delete ourDog.bark;
+// After the last line shown above, ourDog looks like:
+
+// {
+//   "name": "Camper",
+//   "legs": 4,
+//   "tails": 1,
+//   "friends": ["everything!"]
+// }
+
+const myDog6 = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+  bark: "woof",
+};
+
+delete myDog6.tails;
+console.log(myDog6); //se elimino la prop tails del objeto myDog6
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Using Objects for Lookups - Uso de objetos para búsquedas
+
+//Here is an example of an article object:
+
+const article = {
+  title: "How to create objects in JavaScript",
+  link: "https://www.freecodecamp.org/news/a-complete-guide-to-creating-objects-in-javascript-b0e2450655e8/",
+  author: "Kaashan Hussain",
+  language: "JavaScript",
+  tags: "TECHNOLOGY",
+  createdAt: "NOVEMBER 28, 2018",
+};
+
+const articleAuthor = article["author"];
+const articleLink = article["link"];
+
+const value = "title";
+const valueLookup = article[value];
+
+//*------ convertir similar al ejemplo de arriba
+//* Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+
+// Setup
+// function phoneticLookup(val) {
+//     let result = "";
+
+//     // Only change code below this line
+//     switch(val) {
+//       case "alpha":
+//         result = "Adams";
+//         break;
+//       case "bravo":
+//         result = "Boston";
+//         break;
+//       case "charlie":
+//         result = "Chicago";
+//         break;
+//       case "delta":
+//         result = "Denver";
+//         break;
+//       case "echo":
+//         result = "Easy";
+//         break;
+//       case "foxtrot":
+//         result = "Frank";
+//     }
+//     // Only change code above this line
+//     return result;
+//}
+//phoneticLookup("charlie");
+
+//*-----------------------------------------------------------
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+  const lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank",
+  };
+  result = lookup[val];
+  // Only change code above this line
+  return result;
+}
+phoneticLookup("charlie");
+console.log(phoneticLookup("charlie"));
