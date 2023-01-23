@@ -436,6 +436,7 @@ console.log(ourPets[0].names[1]); //* en consola imprime Fluffy
 //*---------------------------
 //todo --Using dot and bracket notation, set the variable secondTree to the second item in the trees list from the myPlants object.
 //Con la notación de puntos y corchetes, establezca la variable secondTree en el segundo elemento de la lista de árboles del objeto myPlants.
+//* con la notacion de puntos y corchetes establecer a la variable secondTree en el segundo elemento de la lista de arboles
 
 const myPlants = [
   {
@@ -450,3 +451,43 @@ const myPlants = [
 
 const secondTree = myPlants[1].list[1];
 console.log(secondTree);
+
+//todo-------------------------------------------------------------------------
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+  },
+  2468: {
+    albumTitle: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [],
+  },
+  5439: {
+    albumTitle: "ABBA Gold",
+  },
+};
+
+function updateRecords(records, id, prop, value) {
+  if (value === "") {
+    delete records[id][prop];
+  } else if (prop === "tracks") {
+    records[id][prop] = records[id][prop] || []; // shortcircuit evaluation
+    records[id][prop].push(value);
+  } else {
+    records[id][prop] = value;
+  }
+  return records;
+}
+updateRecords(recordCollection, 5439, "artist", "ABBA");
+
+console.log(recordCollection);
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Iterate with JavaScript While Loops
