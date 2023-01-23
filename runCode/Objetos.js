@@ -293,3 +293,160 @@ function phoneticLookup(val) {
 }
 phoneticLookup("charlie");
 console.log(phoneticLookup("charlie"));
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Testing Objects for Properties
+
+// Example
+
+// const myObj = {
+//   top: "hat",
+//   bottom: "pants"
+// };
+
+//todo myObj.hasOwnProperty("top");  --------- evaluar si existe esa propiedad
+//todo myObj.hasOwnProperty("middle");--------
+// The first hasOwnProperty returns true, while the second returns false.
+
+//todo A veces es útil verificar si la propiedad de un objeto dado existe o no. Podemos usar el método de objetos .hasOwnProperty(propname) para determinar si ese objeto tiene el nombre de propiedad dado. .hasOwnProperty() devuelve verdadero o falso si la propiedad se encuentra o no
+
+//*------------
+//*Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
+//*Modifique la función checkObj para probar si un objeto pasado a la función (obj) contiene una propiedad específica (checkProp). Si se encuentra la propiedad, devuelve el valor de esa propiedad. Si no, devuelve "No encontrado".
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+
+const newObj = {
+  margin: "nuevo margen",
+  top: "hat",
+  bottom: "pants",
+};
+const mycat = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+  bark: "miauuu",
+};
+
+const objeto = checkObj(mycat, "bark");
+console.log(objeto);
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Manipulating Complex Objects
+
+//todo-- Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
+// You will need to place a comma after every object in the array, unless it is the last object in the array.
+//*Agregue un nuevo álbum a la matriz myMusic. Agregue cadenas de artista y título, número de año_lanzamiento y una matriz de formatos de cadenas.
+
+const myMusic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CD", "8T", "LP"],
+    gold: true,
+  },
+];
+console.log(myMusic);
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Accessing Nested Objects
+
+//Here is a nested object:
+
+const ourStorage = {
+  desk: {
+    drawer: "stapler",
+  },
+  cabinet: {
+    "top drawer": {
+      folder1: "a file",
+      folder2: "secrets",
+    },
+    "bottom drawer": "soda",
+  },
+};
+//ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourStorage.desk.drawer would be the string stapler.
+const miCabinet = ourStorage.cabinet["top drawer"].folder2;
+let miDrawer = ourStorage.desk.drawer;
+console.log(miCabinet);
+console.log(miDrawer);
+console.log(ourStorage);
+
+//*Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
+//*Acceda al objeto myStorage y asigne el contenido de la propiedad guantera a la variable guanteBoxContents. Siempre que sea posible, use la notación de puntos para todas las propiedades; de lo contrario, use la notación de corchetes.
+
+// const myStorage = {
+//     "car": {
+//       "inside": {
+//         "glove box": "maps",
+//         "passenger seat": "crumbs"
+//        },
+//       "outside": {
+//         "trunk": "jack"
+//       }
+//     }
+//   };
+
+const myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+
+let gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents); //*---------- consola    maps( el contenido de globe box que asignamos a globeboxcontents)
+
+//TODO-------------------------------------------------------------------------------
+//TODO   Accessing Nested Objects
+//Here is an example of how to access a nested array:
+
+const ourPets = [
+  {
+    animalType: "cat",
+    names: ["Meowzer", "Fluffy", "Kit-Cat"],
+  },
+  {
+    animalType: "dog",
+    names: ["Spot", "Bowser", "Frankie"],
+  },
+];
+
+ourPets[0].names[1];
+ourPets[1].names[0];
+ourPets[0].names[1]; //would be the string Fluffy
+ourPets[1].names[0]; //would be the string Spot.
+
+console.log(ourPets[0].names[1]); //* en consola imprime Fluffy
+
+//*---------------------------
+//todo --Using dot and bracket notation, set the variable secondTree to the second item in the trees list from the myPlants object.
+//Con la notación de puntos y corchetes, establezca la variable secondTree en el segundo elemento de la lista de árboles del objeto myPlants.
+
+const myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
+
+const secondTree = myPlants[1].list[1];
+console.log(secondTree);
