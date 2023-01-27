@@ -51,5 +51,4 @@ function randomRange(myMin, myMax) {
   return numeroEntreMaximoYMinimo;
   // Only change code above this line
 }
-
 randomRange(7, 14);
